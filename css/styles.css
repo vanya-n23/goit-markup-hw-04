@@ -59,6 +59,7 @@ img {
 
 .page-header {
         border-bottom: 1px solid #e7e9fc;
+        box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 
 
 }
@@ -79,6 +80,25 @@ img {
         gap: 40px;
 }
 
+.nav-link.current {
+        position: relative;
+
+}
+
+.nav-link.current::after {
+        content: "";
+
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+
+        width: 100%;
+        height: 4px;
+
+        background-color: #404bbf;
+        border-radius: 2px;
+}
+
 .nav-link {
         display: block;
         padding: 24px 0;
@@ -87,10 +107,12 @@ img {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #2e2f42;
+        transition: color cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
-.nav-link:focus {
+.nav-link:focus,
+.nav-link.current {
     color: #404bbf;
 }
 
@@ -106,6 +128,7 @@ img {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #434455;
+        transition: color cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
@@ -123,7 +146,14 @@ img {
 
 .main-section {
     background-color: #2e2f42;
-    padding: 188px 0
+    padding: 188px 0;
+    background-image: linear-gradient(to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url(/images/people-office-squashed.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
 }
 
 
@@ -222,6 +252,23 @@ background-color: #404BBF;
         color: #434455;
 }
 
+.banefits-icon {
+        display: flex;
+        border: 1px solid #8e8f99;
+        border-radius: 4px;
+        width: 264px;
+        height: 112px;
+        background-color: #f4f4fd;
+        margin-bottom: 8px;
+}
+
+.icon-banefets {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+}
+
 /* TEAM */
 
 .main-title-team {
@@ -234,6 +281,8 @@ background-color: #404BBF;
 
 .team-card-div {
         padding: 32px 0;
+        box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+        border-radius: 0 0 4px 4px;
 }
 
 
@@ -287,7 +336,61 @@ background-color: #404BBF;
         color: #434455;
 }
 
+.icons-team-list {
+        display: flex;
+      margin-left: 16px;
+      margin-top: 8px;
+      gap: 24px;
+}
+
+.icons-team-list .icon-team-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color:#4d5ae5;
+}
+
+.icons-team-list .icon-team-link:hover {
+        background-color:#404bbf;
+}
+
+.icon-team {
+        fill: #FFFFFF;
+}
+
+
 /* portfolio */
+
+.main-item-portfolio:hover .overlay {
+        transform: translateY(0)
+}
+
+.overlay {
+        position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transform: translateY(100%);
+                transition: transform 250ms ease-in-out;
+                padding: 8px;
+                background-color: #3f51b5;
+                color: #fff;
+                font-family: "Roboto", sans-serif;
+}
+
+.icon-overlay-bxox {
+        position: relative;
+        overflow: hidden;
+}
+    
+.icon-portfolio {
+        position: relative;
+}
+
 
 .port-container {
         padding: 32px 16px
@@ -370,10 +473,46 @@ background-color: #404BBF;
 
 .footer-article {
         max-width: 264px;
-        
         font-weight: 400;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #f4f4fd;
+}
+
+.fotter-container {
+        display: flex;
+        align-items: flex-start;
+}
+
+.fotter-title {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #fff;
+}
+
+.fotter-icons-list {
+        
+        display: flex;
+}
+
+.fotter-icons-list .icon-footer-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #4d5ae5;
+}
+
+.fotter-icons-list .icon-footer-link:hover {
+        background-color: #31d0aa;
+}
+
+.list-div-footer {
+        margin-left: 120px;
 }
