@@ -154,6 +154,7 @@ img {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        max-width: 1440px;
        
 }
 
@@ -343,6 +344,7 @@ background-color: #404BBF;
 }
 
 .icons-team-list {
+        justify-content: center;
         display: flex;
       margin-left: 16px;
       margin-top: 8px;
@@ -389,6 +391,12 @@ background-color: #404BBF;
                 padding: 8px;
                 background-color: #3f51b5;
                 color: #fff;
+                line-height: 1.5;
+                letter-spacing: 0.02em;
+                color: #f4f4fd;
+                padding: 40px 32px;
+                background-color: #4d5ae5;
+                transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 li:hover p {
@@ -400,7 +408,8 @@ li:hover p {
 .main-item-portfolio:hover {
         box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
                 0px 1px 1px rgba(46, 47, 66, 0.16),
-                0px 2px 1px rgba(46, 47, 66, 0.08);;
+                0px 2px 1px rgba(46, 47, 66, 0.08);
+                transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -476,7 +485,6 @@ li:hover p {
 /* FOTTER */
 
 
-
 .page-footer {
     background-color: #2e2f42;
     padding-top: 100px;
@@ -491,7 +499,7 @@ li:hover p {
 .footer-logo .logo-part {
         
         margin-bottom: 16px;
-    color: #f4f4fd;
+        color: #f4f4fd;
 }
 
 .footer-article {
@@ -505,7 +513,11 @@ li:hover p {
 
 .fotter-container {
         display: flex;
-        align-items: flex-start;
+        align-items: baseline;
+}
+
+.fotter-icons-studio {
+        margin-right: 120px;
 }
 
 .fotter-title {
@@ -515,11 +527,13 @@ li:hover p {
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #fff;
+        margin-bottom: 16px;
 }
 
-.fotter-icons-list {
-        
+.fotter-icons-list {    
         display: flex;
+        gap: 16px;
+        
 }
 
 .fotter-icons-list .icon-footer-link {
@@ -530,12 +544,14 @@ li:hover p {
         height: 40px;
         border-radius: 50%;
         background-color: #4d5ae5;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fotter-icons-list .icon-footer-link:hover {
         background-color: #31d0aa;
 }
 
-.list-div-footer {
-        margin-left: 120px;
+.fotter-icons-list .icon-footer-link:focus {
+        background-color: #31d0aa;
 }
+
